@@ -58,7 +58,7 @@ body{
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 50px;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: #fefefe;
 }
 .avatar{

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+/*Размер и цвет меню*/
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+/*Свойсва логтипа компании*/
+label.logo{
+    color: white;
+    font-size: 30px;
+    line-height: 75px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+/*Свйоства свписка меню*/
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+/*Своства пунктов меню*/
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+/*Своства текста(ссылка) меню */
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+/*Стиль по наведению на пункт меню*/
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+}
+/*Свойтсва иконки бургер меню*/
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/*Медиазапрос на отображение меню*/
+@media (max-width: 1440px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+/*Медиа запрос на размер экрана с с которого отображается бургер меню*/
+@media (max-width: 927px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}

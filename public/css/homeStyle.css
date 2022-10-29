@@ -1,0 +1,147 @@
+body{
+    background-color: #f6f9fe;
+}
+
+.companyCardContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:row;
+    padding: 50px 50px;
+    flex-wrap: wrap;
+}
+.companyCard{
+   /* width: 100px;*/
+    width: 400px;
+    height: 500px;
+    background-color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+}
+.cardImg{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+}
+.cardText{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.companyCard:nth-child(1) .cardImg{
+    background-image: url("../img/imgCompanyOne.jpg");
+    background-size: cover;
+}
+.companyCard:nth-child(2) .cardImg{
+    background-image: url("../img/imgCompanyTwo.jpg");
+    background-size: cover;
+}
+.companyCard:nth-child(3) .cardImg{
+    background-image: url("../img/imgCompanyTree.jpg");
+    background-size: cover;
+}
+.settingsContainer{
+    padding: 50px 100px;
+}
+.settingInfoContainer{
+    background-color: #fefefe;
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+.settingInfoGridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 50px;
+    border-radius: 15px;
+    background-color: #fefefe;
+}
+.avatar{
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+}
+.informationContainer{
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: #fefefe;
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: row;
+}
+.informationContainer>div{
+    margin-left: 30px;
+}
+.fullNameSettings{
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.fullNameElement {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+.emailAddressElement {
+    grid-area: 1 / 2 / 2 / 3;
+    border-radius: 6px;
+    background-color: white;
+    height: 50px;
+}
+.addressElement {
+    grid-area: 2 / 1 / 3 / 3;
+    border-radius: 6px;
+    background-color: white;
+    height: 50px;
+}
+.cityElement {
+    grid-area: 3 / 1 / 4 / 2;
+    border-radius: 6px;
+    background-color: white;
+    height: 50px;
+}
+.div5 {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: #0082e6;
+    border-radius: 6px;
+    background-color: white;
+    height: 50px;
+}
+.div6 {
+    grid-area: 4 / 1 / 5 / 2;
+    border-radius: 6px;
+    background-color: white;
+    height: 50px;
+}
+input{
+    padding-left: 10px;
+    width: 100%;
+    border: solid 1px #0082e6;
+    border-radius: 6px;
+    height: 50px;
+    font-size: 20px;
+}
+.div7 {
+    grid-area: 4 / 2 / 5 / 3;
+    border-radius: 6px;
+    background-color: white;
+    height: 50px;
+}
+.submitButtonSettings {
+    grid-area: 5 / 1 / 6 / 3;
+    background-color: #0082e6;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}

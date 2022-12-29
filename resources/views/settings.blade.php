@@ -1,16 +1,17 @@
 @extends('layout.app')
 
+@section('links')
+    <link rel="stylesheet" href="/css/homeStyle.css">
+    <link rel="stylesheet" href="/css/mediaSettings.css">
+@endsection
 @section('content')
 
     <div class="settingsContainer">
         <div class="informationContainer">
-            <img src="../img/imgAvatar.jpg" alt="Avatar" class="avatar">
+            <img src="../img/img_avatar.png" alt="Avatar" class="avatar">
             <div>
                 <p class="fullNameSettings">
-                    Милько Вадим Дмитриевич
-                </p>
-                <p>
-                    Инженер-программист
+                    {{\Illuminate\Support\Facades\Auth::user()->fullName}}
                 </p>
             </div>
         </div>
@@ -18,35 +19,36 @@
             <h1>
                 Изменить информацию о пользователе
             </h1>
-            <form action="/settings/addInformation" method="POST">
+            <form action="{{route('updateUser')}}" method="POST">
+                @csrf
                 <div class="settingInfoGridContainer">
                     <div class="fullNameElement">
                         <legend>ФИО</legend>
-                        <input type="text" id="name" value="Милько Вадим Дмитриевич">
+                        <input type="text" name="fullName" id="fullName" value="{{\Illuminate\Support\Facades\Auth::user()->fullName}}">
                     </div>
                     <div class="emailAddressElement">
                         <legend>Email</legend>
-                        <input type="text" id="email" value="milko.vadimka@mail.ru">
+                        <input type="email" name="email" id="email" value="{{\Illuminate\Support\Facades\Auth::user()->email}}">
                     </div>
                     <div class="addressElement">
                         <legend>Адрес</legend>
-                        <input type="text" id="address" value="ул.Колсмонавтов, д.11, к.223">
+                        <input type="text" name="address" id="address" value="{{\Illuminate\Support\Facades\Auth::user()->address}}">
                     </div>
                     <div class="cityElement">
                         <legend>Город</legend>
-                        <input type="text" id="city" value="Могилёв">
+                        <input type="text" name="city" id="city" value="{{\Illuminate\Support\Facades\Auth::user()->city}}">
                     </div>
-                    <div class="div5">
-                        <legend>Город</legend>
-                        <input type="text" id="city" value="Могилёв">
+                    <div class="countryElement">
+                        <legend>Гражданство</legend>
+                        <input type="text" name="country" id="country" value="{{\Illuminate\Support\Facades\Auth::user()->country}}">
                     </div>
-                    <div class="div6">
-                        <legend>Город</legend>
-                        <input type="text" id="city" value="Могилёв">
+                    <div class="companyElement">
+                        <legend>Компания</legend>
+                        <input type="text" name="company" id="company" value="{{\Illuminate\Support\Facades\Auth::user()->company}}" readonly>
                     </div>
-                    <div class="div7">
-                        <legend>Город</legend>
-                        <input type="text" id="city" value="Могилёв">
+                    <div class="objectElement">
+                        <legend>Объект</legend>
+                        <input type="text" name="object" id="object" value="{{\Illuminate\Support\Facades\Auth::user()->object}}" readonly>
                     </div>
                     <button class="submitButtonSettings" type="submit">Сохранить информацию</button>
                 </div>

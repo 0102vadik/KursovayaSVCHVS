@@ -1,0 +1,83 @@
+@media (max-width: 830px) {
+    .settingsContainer{
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 610px) {
+    .fullNameSettings{
+        margin-top: 30px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .informationContainer{
+        padding-left: 20px;
+    }
+    .settingInfoGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 50px;
+        border-radius: 20px;
+        background-color: #fefefe;
+    }
+    .fullNameElement {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .emailAddressElement {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .addressElement {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .cityElement {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .countryElement {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    .companyElement {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+    .objectElement {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+    .submitButtonSettings {
+        grid-area: 8 / 1 / 9 / 2;
+    }
+}
+
+@media (max-width: 542px) {
+    .settingsContainer{
+        padding: 50px 30px;
+    }
+    .informationContainer{
+        height: 400px;
+        padding: 70px 0px;
+        align-content: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: relative;
+    }
+    .settingInfoContainer{
+        background-color: #fefefe;
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    .informationContainer>div{
+        margin-left: 0px;
+        text-align: center;
+    }
+    .avatar{
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -20%);
+    }
+    h1{
+        text-align: center;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+}

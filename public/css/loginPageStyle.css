@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f9fe;
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0082e6;
+    padding: 40px 50px;
+    border-radius: 6px;
+}
+
+.loginContainer > img {
+    width: 150px;
+    height: 150px;
+}
+
+form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    color: white;
+    outline: none;
+    background: #0082e6;
+    height: 25px;
+    border: solid 1px transparent;
+    border-bottom: ridge white;
+    margin: 15px 0px;
+    background-repeat: no-repeat;
+    background-position: 4px;
+    background-size: 15px;
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+input[type="text"] {
+    background-image: url("../img/imgIconLogin.png");
+}
+
+input[type="password"] {
+    background-image: url("../img/imgIconPassword.png");
+}
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+
+input::-moz-placeholder {
+    color: white;
+}
+.submitButtonLogin{
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    color: #0082e6;
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+    transition: all 0.6s ease;
+}
+
+.submitButtonLogin:hover {
+    background: #0082e6;
+    color: white;
+    transition: all 0.6s ease;
+}
+
+
+
+

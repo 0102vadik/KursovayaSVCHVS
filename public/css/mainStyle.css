@@ -61,7 +61,7 @@ a.active,a:hover{
     display: none;
 }
 /*Медиазапрос на отображение меню*/
-@media (max-width: 1440px) {
+@media (max-width: 3548px) {
     label.logo{
         font-size: 30px;
         padding-left: 30px;
@@ -70,7 +70,7 @@ a.active,a:hover{
         font-size: 16px;
     }
 }
-/*Медиа запрос на размер экрана с с которого отображается бургер меню*/
+/*Медиа запрос на размер экрана с которого отображается бургер меню*/
 @media (max-width: 927px) {
     .checkbtn{
         display: block;
@@ -101,3 +101,4 @@ a.active,a:hover{
         left: 0;
     }
 }
+

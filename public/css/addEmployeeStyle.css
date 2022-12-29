@@ -1,0 +1,181 @@
+body {
+    background-color: #f6f9fe;
+}
+
+/*Стиль для поля с контентом*/
+main {
+    padding: 50px 100px;
+}
+
+/*Стиль для поля ввода данных о сотруднике*/
+.addEmployeeCard {
+    background-color: #fefefe;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Стиль для блока с полями для ввода данных*/
+.addEmployeeGridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 50px;
+    border-radius: 20px;
+    background-color: #fefefe;
+}
+
+/*Стиль для полей ввода данных*/
+input {
+    padding-left: 10px;
+    width: 100%;
+    border: solid 1px #0082e6;
+    border-radius: 6px;
+    height: 50px;
+    font-size: 20px;
+}
+
+/*Стиль для блока с вводом ФИО*/
+.addEmployeeFullName {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с вводом электронной почты*/
+.addEmployeeEmail {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с вводом домашнего адреса*/
+.addEmployeeAddress {
+    grid-area: 2 / 1 / 3 / 3;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с вводом города постоянного проживания*/
+.addEmployeeCity {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с вводом гражданства сотрудника*/
+.addEmployeeCountry {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с вводом производственной компании сотрудника*/
+.addEmployeeCompany {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с вводом объекта за которым закреплён сотрудник*/
+.addEmployeeObject {
+    grid-area: 4 / 2 / 5 / 3;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с созданием логина*/
+.addEmployeeLogin {
+    grid-area: 5 / 1 / 6 / 2;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль для блока с созданием пароля*/
+.addEmployeePassword {
+    grid-area: 5 / 2 / 6 / 3;
+    background-color: white;
+    border-radius: 6px;
+    height: 50px;
+}
+
+/*Стиль кнопки создания сотрудника*/
+.submitButtonAddEmployee {
+    grid-area: 6 / 1 / 7 / 3;
+    background-color: #0082e6;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    transition: all 0.6s ease;
+}
+
+/*Стиль кнопки создания сотрудника (при наведении)*/
+.submitButtonAddEmployee:hover {
+    background: white;
+    color: #0082e6;
+    transition: all 0.6s ease;
+}
+
+/*Медиазапрос работающий при ширине экрана меньше или равной 800px*/
+@media (max-width: 800px) {
+    .addEmployeeContainer {
+        padding: 50px 30px;
+    }
+
+    .addEmployeeGridContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 1fr);
+    }
+
+    .addEmployeeFullName {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .addEmployeeEmail {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .addEmployeeAddress {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    .addEmployeeCity {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .addEmployeeCountry {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    .addEmployeeCompany {
+        grid-area: 6 / 1 / 7 / 2;
+    }
+
+    .addEmployeeObject {
+        grid-area: 7 / 1 / 8 / 2;
+    }
+
+    .addEmployeeLogin {
+        grid-area: 8 / 1 / 9 / 2;
+    }
+
+    .addEmployeePassword {
+        grid-area: 9 / 1 / 10 / 2;
+    }
+
+    .submitButtonAddEmployee {
+        grid-area: 10 / 1 / 11 / 2;
+    }
+}
+
